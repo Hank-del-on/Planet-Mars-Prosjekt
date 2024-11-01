@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: rgb(169, 169, 169);
-}
+/* body {
+  background-color: #f0f4ef;
+} */
 
 .navbar {
   display: flex;
@@ -25,6 +25,20 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5em;
+}
+
+.secondary-navbar {
+  background-color: black;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.secondary-navbar .secondary-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  background-color: black;
 }
 
 .search-input {
@@ -92,11 +106,18 @@ ul {
 
 /* ############################################################################################*/
 /* ===============================  F O O T E R  ==================================== */
+
+.footer-begin {
+  background-color: black;
+  height: 200px;
+  width: 100%;
+}
 .footer_section {
   margin: 0 auto;
-}
-/* ===============================  FIRST = F O O T E R  ==================================== */
+
+  /* ===============================  FIRST = F O O T E R  ==================================== */
   /* max-width: calc(100% - 50%); */
+
   color: #435978;
 
   font-weight: 500;
@@ -242,105 +263,101 @@ ul {
 
 /* -----------------------------MEDIA QUERIES----------------------------- */
 
+.subscriber_mid {
+  grid-template-columns: 1fr;
+  /* grid-template-rows: 1.2fr 0.01fr 1fr 0.01fr 1fr; */
+  grid-template-rows: 0.9fr 0.01fr 0.9fr 0.01fr 0.9fr;
+  grid-template-areas:
+    "first"
+    "horizontal"
+    "second"
+    "horizontal2"
+    "last";
+  height: 100%;
+  grid-gap: 0px;
+}
 
+.first_para {
+  margin-left: 3%;
+}
 
+.middle_para {
+  flex-wrap: wrap;
+}
 
-  .subscriber_mid {
-    grid-template-columns: 1fr;
-    /* grid-template-rows: 1.2fr 0.01fr 1fr 0.01fr 1fr; */
-    grid-template-rows: 0.9fr 0.01fr 0.9fr 0.01fr 0.9fr;
-    grid-template-areas:
-      "first"
-      "horizontal"
-      "second"
-      "horizontal2"
-      "last";
-    height: 100%;
-    grid-gap: 0px;
-  }
+.last_para {
+  text-align: center;
+}
 
-  .first_para {
-    margin-left: 3%;
-  }
+.footer_mid_subscriber_button {
+  margin-right: 0;
+}
 
-  .middle_para {
-    flex-wrap: wrap;
-  }
+.vertical {
+  display: none;
+}
 
-  .last_para {
-    text-align: center;
-  }
+.vertical2 {
+  display: none;
+}
 
-  .footer_mid_subscriber_button {
-    margin-right: 0;
-  }
+.vertical3 {
+  display: none;
+}
 
-  .vertical {
-    display: none;
-  }
+.horizontal {
+  border-bottom: 1px solid #0000004d;
+  grid-area: horizontal;
+}
 
-  .vertical2 {
-    display: none;
-  }
+.horizontal2 {
+  border-bottom: 1px solid #0000004d;
+  grid-area: horizontal2;
+}
 
-  .vertical3 {
-    display: none;
-  }
+.contacts h4 {
+  text-align: left;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
 
-  .horizontal {
-    border-bottom: 1px solid #0000004d;
-    grid-area: horizontal;
-  }
+.contacts {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
 
-  .horizontal2 {
-    border-bottom: 1px solid #0000004d;
-    grid-area: horizontal2;
-  }
+.icon_section {
+  margin-left: 0%;
+  justify-content: center;
+}
 
-  .contacts h4 {
-    text-align: left;
-    margin-left: 2%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-  }
+.footer_mid_icons_inner {
+  font-size: 3rem;
+}
 
-  .contacts {
-    margin-top: 3%;
-    margin-bottom: 3%;
-  }
+.subscriber_last {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+}
 
-  .icon_section {
-    margin-left: 0%;
-    justify-content: center;
-  }
+.footer_logo_last {
+  text-align: center;
+}
 
-  .footer_mid_icons_inner {
-    font-size: 3rem;
-  }
+.footer_last_mid_para {
+  text-align: center;
+}
 
-  .subscriber_last {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 1%;
-  }
+.footer_last_last_para {
+  text-align: center;
+}
 
-  .footer_logo_last {
-    text-align: center;
-  }
-
-  .footer_last_mid_para {
-    text-align: center;
-  }
-
-  .footer_last_last_para {
-    text-align: center;
-  }
-
-  .footer_last {
-    margin: 0;
-  }
-
+.footer_last {
+  margin: 0;
+}
 
 @media only screen and (max-width: 576px) {
   .subscriber_head {
@@ -398,4 +415,3 @@ ul {
     font-size: 1.2rem;
   }
 }
-
